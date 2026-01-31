@@ -42,7 +42,6 @@ nav{
   align-items:center;
 }
 
-/* NAV LINKS */
 .nav-link{
   position:relative;
   margin-left:18px;
@@ -50,38 +49,23 @@ nav{
   color:#b5bfdc;
   text-decoration:none;
   padding:6px 4px;
-  transition:.25s ease;
-}
-
-.nav-link:hover{
-  color:#ffffff;
-}
-
-.nav-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:2px;
-  background:#4f9cff;
-  transition:width .25s ease;
-}
-
-.nav-link:hover::after{
-  width:100%;
 }
 
 .nav-link.active{
   color:#ffffff;
-  font-weight:600;
 }
 
 .nav-link.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
   width:100%;
+  height:2px;
+  background:#4f9cff;
 }
 
-/* CTA BUTTON */
+/* CTA */
 .cta{
   margin-left:22px;
   padding:9px 18px;
@@ -90,11 +74,6 @@ nav{
   color:#fff;
   font-weight:600;
   text-decoration:none;
-  box-shadow:0 6px 20px rgba(79,156,255,.35);
-}
-
-.cta:hover{
-  box-shadow:0 10px 30px rgba(79,156,255,.5);
 }
 
 /* ===== HERO ===== */
@@ -107,14 +86,9 @@ nav{
   padding:120px 20px 80px;
 }
 
-.hero-inner{
-  max-width:800px;
-}
-
 .hero h1{
   font-size:52px;
   font-weight:800;
-  line-height:1.15;
 }
 
 .hero span{
@@ -124,10 +98,10 @@ nav{
 .hero p{
   margin:24px auto 40px;
   color:#cfcfcf;
-  font-size:16px;
-  line-height:1.7;
+  max-width:700px;
 }
 
+/* BUTTONS */
 .btn{
   display:inline-block;
   background:#4f9cff;
@@ -138,24 +112,16 @@ nav{
   text-decoration:none;
 }
 
-.btn.big{
-  font-size:16px;
+.btn.small{
+  padding:10px 20px;
+  font-size:14px;
 }
 
 /* ===== SERVICES ===== */
 .services{
   padding:100px 20px;
-  text-align:center;
   background:#11162a;
-}
-
-.services h2{
-  font-size:34px;
-}
-
-.services .sub{
-  margin:14px 0 50px;
-  color:#cfcfcf;
+  text-align:center;
 }
 
 .service-grid{
@@ -166,11 +132,61 @@ nav{
   gap:28px;
 }
 
-.card{
-  background:#0b0f1a;
+/* ===== PRICING ===== */
+.pricing-hero{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.pricing-hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.pricing-hero p{
+  color:#cfcfcf;
+}
+
+.pricing{
+  padding:80px 20px;
+}
+
+.pricing-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.price-card{
+  background:#11162a;
   border:1px solid #1e243a;
-  border-radius:14px;
-  padding:34px 26px;
+  border-radius:18px;
+  padding:36px 28px;
+  text-align:center;
+}
+
+.price-card.featured{
+  border-color:#4f9cff;
+  transform:scale(1.05);
+}
+
+.price{
+  font-size:32px;
+  font-weight:800;
+  color:#4f9cff;
+  margin:20px 0;
+}
+
+.price-card ul{
+  list-style:none;
+  margin-bottom:30px;
+}
+
+.price-card ul li{
+  margin:10px 0;
+  color:#cfcfcf;
 }
 
 /* ===== FOOTER ===== */
@@ -180,4 +196,4 @@ nav{
   font-size:14px;
   color:#9aa4c2;
   border-top:1px solid #1e243a;
-}
+  }
