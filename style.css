@@ -18,12 +18,17 @@ body{
   position:sticky;
   top:0;
   z-index:100;
+  background:#0b0f1a;
+  border-bottom:1px solid #1e243a;
+}
+
+.nav-wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 22px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 22px;
-  background:#0b0f1a;
-  border-bottom:1px solid #1e243a;
 }
 
 .logo{
@@ -33,7 +38,7 @@ body{
 }
 
 nav a{
-  margin-left:16px;
+  margin-left:18px;
   text-decoration:none;
   color:#cfcfcf;
   font-size:14px;
@@ -43,29 +48,36 @@ nav a:hover{
   color:#ffffff;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
   background:#4f9cff;
   color:#fff !important;
-  padding:9px 16px;
+  padding:9px 18px;
   border-radius:8px;
   font-weight:600;
 }
 
 .btn.big{
-  padding:14px 26px;
+  padding:14px 32px;
   font-size:16px;
 }
 
 /* ===== HERO ===== */
 .hero{
   min-height:100vh;
-  padding:120px 20px 80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  padding:120px 20px 80px;
+}
+
+.hero-inner{
+  max-width:800px;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:52px;
   font-weight:800;
   line-height:1.15;
 }
@@ -75,24 +87,52 @@ nav a:hover{
 }
 
 .hero p{
-  margin:22px auto 36px;
-  max-width:600px;
+  margin:24px auto 40px;
   color:#cfcfcf;
-  line-height:1.6;
+  font-size:16px;
+  line-height:1.7;
 }
 
-/* ===== TEST SECTION ===== */
-.test{
+/* ===== SERVICES ===== */
+.services{
   padding:100px 20px;
-  background:#11162a;
   text-align:center;
+  background:#11162a;
 }
 
-.test h2{
-  font-size:28px;
+.services h2{
+  font-size:34px;
 }
 
-.test p{
-  margin-top:10px;
+.services .sub{
+  margin:14px 0 50px;
   color:#cfcfcf;
+}
+
+.service-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:#0b0f1a;
+  border:1px solid #1e243a;
+  border-radius:14px;
+  padding:34px 26px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+  color:#9aa4c2;
+  border-top:1px solid #1e243a;
 }
