@@ -37,29 +37,64 @@ body{
   color:#4f9cff;
 }
 
-nav a{
-  margin-left:18px;
-  text-decoration:none;
-  color:#cfcfcf;
-  font-size:14px;
+nav{
+  display:flex;
+  align-items:center;
 }
 
-nav a:hover{
+/* NAV LINKS */
+.nav-link{
+  position:relative;
+  margin-left:18px;
+  font-size:14px;
+  color:#b5bfdc;
+  text-decoration:none;
+  padding:6px 4px;
+  transition:.25s ease;
+}
+
+.nav-link:hover{
   color:#ffffff;
 }
 
-/* BUTTON */
-.btn{
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
   background:#4f9cff;
-  color:#fff !important;
-  padding:9px 18px;
-  border-radius:8px;
+  transition:width .25s ease;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+.nav-link.active{
+  color:#ffffff;
   font-weight:600;
 }
 
-.btn.big{
-  padding:14px 32px;
-  font-size:16px;
+.nav-link.active::after{
+  width:100%;
+}
+
+/* CTA BUTTON */
+.cta{
+  margin-left:22px;
+  padding:9px 18px;
+  border-radius:999px;
+  background:#4f9cff;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 6px 20px rgba(79,156,255,.35);
+}
+
+.cta:hover{
+  box-shadow:0 10px 30px rgba(79,156,255,.5);
 }
 
 /* ===== HERO ===== */
@@ -93,6 +128,20 @@ nav a:hover{
   line-height:1.7;
 }
 
+.btn{
+  display:inline-block;
+  background:#4f9cff;
+  color:#fff;
+  padding:14px 32px;
+  border-radius:999px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.btn.big{
+  font-size:16px;
+}
+
 /* ===== SERVICES ===== */
 .services{
   padding:100px 20px;
@@ -122,10 +171,6 @@ nav a:hover{
   border:1px solid #1e243a;
   border-radius:14px;
   padding:34px 26px;
-}
-
-.card h3{
-  margin-bottom:10px;
 }
 
 /* ===== FOOTER ===== */
