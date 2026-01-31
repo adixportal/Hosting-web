@@ -1,1 +1,1 @@
-console.log("Sanket Web Loaded Successfully 🚀");
+console.log("Sanket Web • Professional Build Loaded 🚀");
